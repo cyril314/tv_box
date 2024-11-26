@@ -8,10 +8,12 @@ buildscript {
         maven { url "https://jitpack.io" }
         maven { url "https://maven.aliyun.com/repository/releases" }
         maven { url "https://maven.aliyun.com/repository/public" }
-        maven { url "https://storage.googleapis.com/r8-releases/raw" }
+        maven {
+            url "https://storage.googleapis.com/r8-releases/raw"
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.0'
+        classpath 'com.android.tools.build:gradle:7.4.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -33,14 +35,4 @@ allprojects {
 
 tasks.register('clean', Delete) {
     delete rootProject.buildDir
-}
-
-ext {
-    appVersionCode = 1
-    appVersionName = '1.0.0'
-    // Sdk and tools
-    minSdkVersion = 16
-    targetSdkVersion = 29
-    compileSdkVersion = 29
-    buildToolsVersion = '29.0.2'
 }

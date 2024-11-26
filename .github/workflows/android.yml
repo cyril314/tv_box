@@ -19,8 +19,8 @@ jobs:
       - name: Setup JDK
         uses: actions/setup-java@v4
         with:
-          distribution: 'zulu'  # 使用 Zulu OpenJDK
-          java-version: '8'     # 指定 JDK 1.8
+          distribution: 'zulu'
+          java-version: '11'
 
       - name: Cache Gradle dependencies
         uses: actions/cache@v4
